@@ -1,0 +1,51 @@
+.user {
+    position: fixed;
+    top: 73px;
+    right: -100%;
+    transition: .3s linear;
+    background-color: white;
+    border-radius: 0 0 0px 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem 2rem;
+    z-index: 100;
+
+
+    img {
+        width: 100px;
+        height: 100px;
+        border-radius: 100%;
+        background-color: #eeecec;
+    }
+
+    h2 {
+        font-weight: 500;
+        color: #293337;
+    }
+
+    h4 {
+        font-weight: 400;
+        color: #817a7a;
+    }
+
+    p {
+        font-size: .8rem;
+        color: #817a7a;
+    }
+
+    button {
+        padding: 5px 20px;
+        background-color: #293337;
+        color: white;
+        border-radius: 10px;
+        margin-top: 1rem;
+
+        &:hover {
+            opacity: .7;
+            transition: .3s linear;
+            cursor: pointer;
+        }
+    }
+}

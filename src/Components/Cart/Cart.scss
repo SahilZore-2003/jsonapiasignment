@@ -1,0 +1,83 @@
+@import "../../colors.scss";
+
+.cart {
+
+    .emptycart{
+        height: 90vh;
+        width: 100%;
+        display: grid;
+        place-items: center;
+
+        img{
+           max-width: 400px; width: 100%;
+            height: auto;
+            object-fit: contain;
+        }
+    }
+
+    h1 {
+        font-size: 1.5rem;
+        font-weight: 500;
+    }
+
+    .main-cart {
+
+        text-align: center;
+        margin-top: 1rem;
+
+        .heading {
+            border-bottom: .5px solid $gray;
+
+            span {
+                font-weight: 600;
+            }
+        }
+
+        .row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-block: 1rem;
+            border-bottom: .5px solid $gray;
+
+            * {
+                flex: 1;
+            }
+
+
+            img {
+                width: 50px;
+                height: 50px;
+                object-fit: contain;
+            }
+
+            h3 {
+                color: $orange;
+            }
+
+            svg {
+                color: red;
+                cursor: pointer;
+            }
+        }
+
+        .total {
+            font-size: 1.5rem;
+            padding: 1rem;
+            color: $gray;
+            display: flex;
+            align-items: center;
+            justify-content: end;
+            gap: 1.5rem;
+
+            span {
+                font-size: 2rem;
+                padding-left: 10px;
+                color: $black;
+            }
+        }
+
+
+    }
+}
+

@@ -1,0 +1,134 @@
+@import "../../colors.scss";
+
+.register {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding-top: 1rem;
+
+    .main {
+        display: flex;
+        align-items: stretch;
+        justify-content: center;
+        max-width: 1000px;
+        box-shadow: #4fb6ffa1 0px 7px 29px 0px;
+        border-radius: 10px;
+        height: 300px;
+        margin-top: 2rem;
+
+        form {
+            flex-basis: 60%;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            padding: 3rem 5%;
+            gap: 1rem;
+
+
+            >div {
+                display: flex;
+                align-items: center;
+                width: 100%;
+                border: 2px solid $dark-sky;
+                margin-bottom: 10px;
+                border-radius: 30px;
+                padding-left: 10px;
+                position: relative;
+
+                small{
+                    position: absolute;
+                    bottom: -1.2rem;
+                    font-size: .8rem;
+                    color: red;
+                    font-weight: 600;
+                }
+
+                svg {
+                    color: $dark-sky;
+                }
+
+                input {
+                    width: 100%;
+                    padding: 10px;
+                    border: none;
+                    border-radius: 30px;
+
+                    &:focus {
+                        border: none;
+                        outline: none;
+                    }
+
+
+                }
+            }
+
+            button {
+                width: 60%;
+                background: $gradient;
+                color: $white;
+                border: none;
+                padding: 10px;
+                border-radius: 20px;
+                cursor: pointer;
+
+                &:hover {
+                    opacity: .7;
+                    transition: .3s;
+                }
+            }
+
+            button:disabled {
+                background: $gray !important;
+                cursor: not-allowed;
+            }
+        }
+
+        .right {
+            background: $gradient;
+            color: $white;
+            text-align: center;
+            flex-basis: 40%;
+            padding: 2rem 5%;
+            display: grid;
+            place-items: center;
+        }
+    }
+
+
+    h1 {
+        font-weight: 500;
+    }
+}
+
+@media (max-width:900px) {
+    .register .main .right {
+        display: none;
+    }
+
+    .register .main form {
+        flex-basis: 100%;
+        width: 500px;
+    }
+}
+
+@media (max-width:500px) {
+
+    .register {
+        .main {
+            width: 90%;
+        }
+    }
+
+    .register .main form {
+        width: 100%;
+
+        >div {
+
+            .input {
+                width: 300px;
+            }
+        }
+    }
+}

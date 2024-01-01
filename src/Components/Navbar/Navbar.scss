@@ -1,0 +1,122 @@
+@import "../../colors.scss";
+
+nav {
+    padding: 1rem 5%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    background-color: white;
+    z-index: 100;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 3px, rgba(0, 0, 0, 0.23) 0px 1px 3px;
+
+    .active {
+        color: $pink;
+    }
+
+    .cartdiv {
+        position: relative;
+
+        svg {
+            color: $gray;
+        }
+
+        span {
+            position: absolute;
+            top: -10px;
+            right: -10px;
+        }
+    }
+
+    img {
+        width: 100px;
+    }
+
+    .middle {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .filter {
+        background-color: $white;
+        color: $gray;
+        padding: 10px;
+        border-radius: 10px;
+
+        &:focus {
+            outline: none;
+            border: .5px solid $black;
+        }
+
+    }
+
+    .searchbox {
+        border: 1px solid black;
+        padding: 0px 10px;
+        border-radius: 10px;
+        width: 300px;
+
+        input {
+            border-radius: 10px;
+            border: none;
+            outline: none;
+            padding: 10px;
+
+            &focus {
+                outline: none;
+            }
+        }
+    }
+
+    .links {
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+        font-size: 1.2rem;
+
+        a:hover {
+            transition: .2s linear;
+            color: $pink;
+        }
+
+        svg {
+            font-size: 2rem;
+        }
+    }
+}
+
+@media (max-width:850px) {
+    nav {
+        gap: 1rem;
+
+        .scrolled {
+            transition: .2s linear;
+            opacity: 1 !important;
+        }
+
+        .searchbox {
+            width: 200px;
+            margin-inline: 1rem;
+        }
+
+        .middle {
+            position: fixed;
+            top: 70px;
+            left: 0;
+            background-color: white;
+            width: 100%;
+            justify-content: space-between;
+            padding: 1rem 3%;
+            z-index: -1;
+            opacity: 0;
+
+            .searchbox {
+                margin: 0;
+            }
+
+        }
+    }
+}
